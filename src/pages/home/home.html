@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let list of lists">
+    <ion-list-header>
+      {{list.ListTitle}}
+    </ion-list-header>
+    <button ion-item *ngFor="let item of list.ListItems" (click)="showItem(item)">
+      {{item.name}}
+    </button>
+  </ion-list>
+
+</ion-content>
